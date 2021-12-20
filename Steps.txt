@@ -1,0 +1,2 @@
+1- Select global dominant color variables for backgrounds and texts
+(primary / secondary / accent / headings / body)
