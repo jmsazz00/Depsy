@@ -12,6 +12,8 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
+  --color-border: #ccc;
+  --border-radius: 30px;
 }
 
 /* Typography */
@@ -179,9 +181,10 @@ a {
 }
 
 .icon--search {
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
   fill: #fff;
+  margin: 0.7rem;
 }
 
 /* Buttons */
@@ -191,11 +194,10 @@ a {
   border: 0;
   color: #fff;
   cursor: pointer;
-  display: block;
   font-size: 1.8rem;
   font-weight: bold;
   margin: 0.8rem;
-  padding: 2rem 3rem;
+  padding: 1.8rem 2.3rem;
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
@@ -224,8 +226,7 @@ a {
 
 .btn--search {
   align-items: center;
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
 }
 
 .btn--outline {
@@ -245,5 +246,45 @@ a {
 @media screen and (min-width: 1024px) {
   .button {
     font-size: 1.5rem;
+    padding: 1.2rem 2.3rem;
+  }
+}
+
+/* Inputs */
+
+.input {
+  border-radius: var(--border-radius);
+  border: 3px solid var(--color-border);
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+  display: inline-block;
+}
+
+::placeholder {
+  color: var(--color-border);
+  font-weight: 300;
+}
+
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: inline-flex;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+}
+
+.input-group .btn--primary {
+  margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+    padding: 1rem 3.5rem;
   }
 }
