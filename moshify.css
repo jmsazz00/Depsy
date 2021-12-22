@@ -392,3 +392,24 @@ a {
     width: 30px;
   }
 }
+
+/* Media Objects */
+
+.media {
+  display: flex;
+}
+
+.media__body {
+  margin: 0 1.5rem;
+}
+
+.media__head {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.media p {
+  font-size: 2rem;
+}
