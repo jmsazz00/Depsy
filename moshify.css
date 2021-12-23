@@ -181,11 +181,24 @@ a {
   border-radius: 100%;
 }
 
+.icon-container--accent {
+  background-color: var(--color-accent);
+}
+
 .icon--search {
   width: 22px;
   height: 22px;
   fill: #fff;
   margin: 0.7rem;
+}
+
+.icon--white {
+  fill: #fff;
+}
+
+.icon--small {
+  width: 30px;
+  height: 30px;
 }
 
 /* Buttons */
@@ -440,7 +453,8 @@ a {
 }
 
 .quote__footer {
-  margin: 0 4rem;
+  margin: 0;
+  font-style: normal;
 }
 
 .quote__footer .media__head {
@@ -460,7 +474,7 @@ a {
   bottom: 10px;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   .quote {
     font-size: 2rem;
   }
@@ -472,5 +486,73 @@ a {
   .quote__footer p {
     font-size: 1.6rem;
   }
-  
+}
+
+/* Grids */
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonials*/
+
+.testimonial .grid {
+  padding: 3rem;
+}
+
+.testimonial__image-container {
+  position: relative;
+  margin: 0 3rem 3rem;
+}
+
+.testimonial__image-container > img {
+  width: 100%;
+}
+
+.testimonial__image-container > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px; /* half of the icon width to put it in the center*/
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .quote__footer .media__head {
+    font-size: 1.8rem;
+  }
+
+  .testimonial .grid {
+    align-items: center;
+    padding: 2rem 0 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .testimonial .quote {
+    font-size: 2.4rem;
+    line-height: 1.5;
+  }
+
+  .quote .quote__text {
+    padding-top: 3rem;
+  }
+
+  .testimonial .grid {
+    padding: 3rem 0 0;
+  }
+
+  .testimonial {
+    margin: 3rem 4rem;
+  }
 }
