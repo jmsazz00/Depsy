@@ -256,6 +256,11 @@ a {
   font-weight: bold;
 }
 
+.btn--callout {
+  width: 30rem;
+  height: 6rem;
+}
+
 @media screen and (min-width: 1024px) {
   .button {
     font-size: 1.5rem;
@@ -554,5 +559,49 @@ a {
 
   .testimonial {
     margin: 3rem 4rem;
+  }
+}
+
+/* Callouts */
+
+.callout {
+  border-radius: 5px;
+  padding: 4rem 5rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.callout--primary{
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.callout__text {
+  margin-right: 3rem;
+}
+
+.callout__text > h2 {
+  color: inherit;
+  margin-top: 0;
+}
+
+.grid .button {
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px){
+  .callout {
+    text-align: left;
+  }
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+  .grid .button {
+    align-self: center;
+    width: 22rem;
   }
 }
