@@ -668,3 +668,42 @@ a {
   position: relative;
   right: 10px;
 }
+
+/* Blocks */
+
+.block {
+  --vertical-padding: 6rem;
+  padding: var(--vertical-padding) 4rem;
+  color: #7b858b;
+}
+
+.block--dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.block__heading {
+  text-align: center;
+}
+
+.block--dark .block__title {
+  color: inherit;
+  margin-top: 0;
+}
+
+.block--skewed {
+  padding-bottom: calc(var(--vertical-padding) + 4rem);
+}
+
+.block--skewed--right {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+}
+
+.block--skewed--left {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
