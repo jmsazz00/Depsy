@@ -153,6 +153,18 @@ a {
   padding-left: 1rem;
 }
 
+.list--collapsible {
+  color: #535353;
+  margin-top: 0;
+  margin-bottom: 4rem;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.list--collapsible .list__item {
+  margin-bottom: 1rem;
+}
+
 @media screen and (min-width: 1024px) {
   .list--tick .list__item {
     padding-left: 0;
@@ -571,7 +583,7 @@ a {
   text-align: center;
 }
 
-.callout--primary{
+.callout--primary {
   background-color: var(--color-primary);
   color: #fff;
 }
@@ -593,7 +605,7 @@ a {
   align-items: center;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .callout {
     text-align: left;
   }
@@ -604,4 +616,55 @@ a {
     align-self: center;
     width: 22rem;
   }
+}
+
+/* Collapsibles */
+
+.collapsible {
+  padding: 0.1rem 4rem;
+}
+
+.collapsible--bottom-page {
+  background-color: black;
+}
+
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collapsible__title {
+  margin: 0;
+  color: #fff;
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+
+.collapsible__chevron {
+  transition: transform 0.3s ease-out;
+  transform: rotate(-90deg);
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+.collapsible--bottom-page > hr {
+  background-color: #393939;
+  border: 0;
+  height: 2px;
+  width: 104%;
+  position: relative;
+  right: 10px;
 }
