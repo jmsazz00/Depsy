@@ -34,6 +34,7 @@ h1,
 h2,
 h3 {
   color: var(--color-headings);
+  line-height: 1.1;
   margin-bottom: 1rem;
 }
 
@@ -784,5 +785,37 @@ a {
 
   .nav__item:last-child {
      margin-bottom: 0;
+  }
+}
+
+/* Hero */
+
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%,0% 100%);
+  padding-top: 0;
+}
+
+.block__content{
+  align-self: center;
+}
+
+.hero__tagline {
+  color: #70767d;
+  letter-spacing: 1px;
+  padding: 2rem 0 5rem;
+}
+
+.hero__image {
+  transform: translateY(-3rem);
+  width: 100%;
+}
+
+@media screen and (min-width: 768px){
+  .hero .block__heading {
+    text-align: left;
+  }
+
+  .hero__tagline {
+    padding: .5rem 0 1rem;
   }
 }
