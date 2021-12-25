@@ -679,7 +679,6 @@ a {
 
 .block--dark {
   background-color: #000;
-  color: #fff;
 }
 
 .block__heading {
@@ -687,7 +686,7 @@ a {
 }
 
 .block--dark .block__title {
-  color: inherit;
+  color: #fff;
   margin-top: 0;
 }
 
@@ -706,4 +705,84 @@ a {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+/* NavBars */
+
+.nav {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 1rem 0;
+}
+
+.nav--dark {
+  background-color: #000;
+}
+
+.nav__list {
+  width: 100%;
+  padding-left: 3rem;
+  margin: 0;
+}
+
+.nav__item {
+  border-bottom: 1px dotted darkgray;
+  padding: .5rem 0 .5rem 1rem;
+}
+
+.nav__item:last-child {
+  margin-bottom: 3rem;
+}
+
+.nav__item > a{
+  color: #c9c6cf;
+  transition: color .3s linear;
+}
+
+.nav__item:hover {
+  background-color: #111;
+}
+.nav__item:hover > a {
+  color: #fff;
+}
+
+.nav .icon {
+  margin: .5rem;
+}
+
+.nav__toggler {
+  opacity: 0.5;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #555;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px){
+  .nav__toggler {
+    display: none;
+  }  
+
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.7rem;
+    max-height: 100%;  /* these last two styles to make list visible beacuse*/ 
+    opacity: 1;         /* in the expanded form it was invisible*/
+  }
+
+  .nav__item {
+    border: 0;
+    padding: 1.5rem;
+  }
+
+  .nav__item:last-child {
+     margin-bottom: 0;
+  }
 }
