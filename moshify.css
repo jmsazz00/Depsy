@@ -284,7 +284,7 @@ a {
   }
 
   .btn--search {
-    padding: .4rem 2rem;
+    padding: 0.4rem 2rem;
   }
 }
 
@@ -338,7 +338,12 @@ a {
   box-shadow: 0 0 20px 10px var(--color-border);
   font-size: 2rem;
   overflow: hidden;
-  margin: 3rem 6rem;
+  margin: 4rem auto;
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
+
+.card--secondary:hover {
+  transform: scale(1.05);
 }
 
 .card__header,
@@ -389,6 +394,14 @@ a {
   letter-spacing: 1px;
 }
 
+.card--popular {
+  transform: scale(1.1);
+}
+
+.card--popular:hover {
+  transform: scale(1.15);
+}
+
 .card--popular .card__header {
   position: relative;
 }
@@ -403,9 +416,6 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-  .card-container {
-    display: flex;
-  }
   .card {
     font-size: 1.8rem;
     margin: 1rem 2rem;
@@ -746,16 +756,16 @@ a {
 
 .nav__item {
   border-bottom: 1px dotted darkgray;
-  padding: .5rem 0 .5rem 1rem;
+  padding: 0.5rem 0 0.5rem 1rem;
 }
 
 .nav__item:last-child {
   margin-bottom: 3rem;
 }
 
-.nav__item > a{
+.nav__item > a {
   color: #c9c6cf;
-  transition: color .3s linear;
+  transition: color 0.3s linear;
 }
 
 .nav__item:hover {
@@ -766,12 +776,12 @@ a {
 }
 
 .nav .icon {
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 .nav__toggler {
   opacity: 0.5;
-  transition: all .2s;
+  transition: all 0.2s;
   cursor: pointer;
 }
 
@@ -781,17 +791,17 @@ a {
   border-radius: 5px;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .nav__toggler {
     display: none;
-  }  
+  }
 
   .nav__list {
     width: auto;
     display: flex;
     font-size: 1.7rem;
-    max-height: 100%;  /* these last two styles to make list visible beacuse*/ 
-    opacity: 1;         /* in the expanded form it was invisible*/
+    max-height: 100%; /* these last two styles to make list visible beacuse*/
+    opacity: 1; /* in the expanded form it was invisible*/
   }
 
   .nav__item {
@@ -800,18 +810,18 @@ a {
   }
 
   .nav__item:last-child {
-     margin-bottom: 0;
+    margin-bottom: 0;
   }
 }
 
 /* Hero */
 
 .hero {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%,0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
   padding-top: 0;
 }
 
-.block__content{
+.block__content {
   align-self: center;
 }
 
@@ -826,13 +836,13 @@ a {
   width: 100%;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .hero .block__heading {
     text-align: left;
   }
 
   .hero__tagline {
-    padding: .5rem 0 1rem;
+    padding: 0.5rem 0 1rem;
   }
 }
 
@@ -846,21 +856,33 @@ a {
 
 .block-domain__prices {
   display: grid;
-  grid-template: repeat(2,6rem) / repeat(3,1fr);
+  grid-template: repeat(2, 6rem) / repeat(3, 1fr);
   align-items: center;
   justify-items: center;
   max-width: 800px;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   .block-domain__prices {
-    grid-template-columns: repeat(auto-fit, minmax(10rem,1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     /* automatically equally distribute the available space on the available items 
     (very extensible for removing/adding an item) */
   }
 
   .block-domain .input-group {
     min-width: 700px;
+  }
+}
+
+/* Plan Blocks */
+
+.block-plans .card {
+  max-width: 500px;
+}
+
+@media screen and (min-width: 1024px){
+  .block-plans .card {
+    margin: 4rem 2rem;
   }
 }
