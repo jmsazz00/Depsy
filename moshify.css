@@ -17,6 +17,10 @@
   --border-radius: 40px;
 }
 
+::selection {
+  color: gold;
+}
+
 /* Typography */
 
 html {
@@ -77,6 +81,7 @@ a {
 .link-arrow {
   color: var(--color-accent);
   font-size: 2rem;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -453,7 +458,7 @@ a {
 }
 
 .media__body {
-  margin: 0 1.5rem;
+  margin: 1.5rem;
 }
 
 .media__head {
@@ -881,8 +886,57 @@ a {
   max-width: 500px;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   .block-plans .card {
     margin: 4rem 2rem;
   }
+}
+
+/* Features */
+
+.block-features .block__heading {
+  max-width: 500px;
+  margin-bottom: 9rem;
+}
+
+.features-body {
+  gap: 4rem;
+  margin-bottom: 14rem;
+}
+
+.features-body:first-child {
+  margin-top: 6rem;
+}
+
+.features-body .media {
+  flex-direction: column;
+}
+
+.features-body .media .media__body {
+  margin-left: 0;
+}
+
+.block-features__image {
+  align-self: flex-end;
+}
+.block-features__image > img {
+  object-fit: cover;
+  width: 100%;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .features-body {
+    grid-template-areas: "lefty righty";
+  }
+
+  .features-body:nth-of-type(even) .block-features__image {
+    grid-area: lefty;
+  }
+
+  .features-body:nth-of-type(even) .media {
+    grid-area: righty;
+  } 
+  
+  /* We can use 'order: 2' style */
 }
