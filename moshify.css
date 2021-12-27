@@ -17,11 +17,12 @@
   --border-radius: 40px;
 }
 
-::selection {
-  color: gold;
-}
-
 /* Typography */
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
 
 html {
   font-size: 62.5%;
@@ -52,6 +53,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  font-weight: 500;
 }
 
 p {
@@ -143,7 +145,6 @@ a {
 .list {
   list-style: none;
   padding-left: 1rem;
-  color: var(--color-headings);
   margin-bottom: 2.4rem;
 }
 
@@ -156,6 +157,7 @@ a {
 .list--tick {
   list-style-image: url(images/tick.svg);
   padding-left: 3rem;
+  color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -471,9 +473,13 @@ a {
   font-size: 2rem;
 }
 
-@media screen and(min-width: 1024px) {
+.media__image{
+  align-self: center;
+}
+
+@media screen and (min-width: 1024px) {
   .media__head,
-  .media p {
+  .media__body {
     font-size: 1.8rem;
   }
 }
@@ -710,6 +716,7 @@ a {
 
 .block__heading {
   text-align: center;
+  margin-bottom: 5rem;
 }
 
 .block__title {
@@ -727,11 +734,11 @@ a {
 }
 
 .block--skewed--right {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
 .block--skewed--left {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 .container {
@@ -822,7 +829,6 @@ a {
 /* Hero */
 
 .hero {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
   padding-top: 0;
 }
 
@@ -924,7 +930,6 @@ a {
   width: 100%;
 }
 
-
 @media screen and (min-width: 1024px) {
   .features-body {
     grid-template-areas: "lefty righty";
@@ -936,7 +941,44 @@ a {
 
   .features-body:nth-of-type(even) .media {
     grid-area: righty;
-  } 
-  
+  }
+
   /* We can use 'order: 2' style */
+}
+
+/* Showcase Block*/
+
+.showcase {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 94%);
+}
+
+.block__picture .block__image {
+  width: 100%;
+  margin-bottom: 2rem;
+  align-self: center;
+}
+
+.showcase .media .media__head {
+  color: #fff;
+  margin-top: 0;
+}
+
+.showcase .media .media__body {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .showcase__content {
+    grid-template-columns: 50% 50%;
+  }
+
+  .block__picture {
+    justify-self: end;
+    align-self: center;
+  }
+
+  .block__picture .block__image {
+    width: auto;
+    max-width: 700px;
+  }
 }
