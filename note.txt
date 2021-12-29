@@ -1,4 +1,0 @@
-TODO: 
-Remember to study html templates that can be used multiple times throughout the project
-and they are in django course and cs50 (i guess symbols like this /% %/ not sure)
-and iterations (zen coding) , and others....
