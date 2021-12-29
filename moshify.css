@@ -1,4 +1,5 @@
 /* Global */
+@import "./normalize.css"; /* combining 2 styleshhets in 1 for performance*/
 
 *,
 *::after,
@@ -550,7 +551,7 @@ a {
 
 /* Testimonials*/
 
-.block.testemonial-block{
+.block.testemonial-block {
   padding: 1rem;
 }
 
@@ -1039,11 +1040,11 @@ a {
   text-transform: uppercase;
 }
 
-.footer__list .list__item a{
+.footer__list .list__item a {
   transition: color 0.15s ease-in;
   color: #6f6f6f;
 }
-.footer__list .list__item:hover a{
+.footer__list .list__item:hover a {
   color: #bbb;
 }
 

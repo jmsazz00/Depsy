@@ -20,7 +20,6 @@
     <meta property="og::image" content="https://..." />
     <meta property="og::type" content="website" />
     <meta property="og::url" content="https://moshify.com" />
-    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="moshify.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,7 +35,9 @@
     <header>
       <section class="block block--dark nav-block">
         <nav class="nav nav--dark collapsible container">
-          <a href="/"><img src="images/logo.svg" alt="Menu logo" /></a>
+          <a href="/"
+            ><img src="images/logo.svg" aria-label="Logo" alt="Menu logo"
+          /></a>
           <svg class="icon icon--white nav__toggler">
             <use xlink:href="images/sprite.svg#menu"></use>
           </svg>
@@ -83,6 +84,7 @@
         </p>
         <div class="input-group">
           <input
+            aria-label="Domain"
             type="text"
             class="input"
             placeholder="Enter name domain here . . ."
@@ -310,8 +312,9 @@
         </article>
       </div>
     </section>
-    <section>
-      class="block block--dark block--skewed block--skewed--right showcase" >
+    <section
+      class="block block--dark block--skewed block--skewed--right showcase"
+    >
       <header class="block__heading container">
         <h2 class="block__title">User Friendly Control Panel</h2>
       </header>
